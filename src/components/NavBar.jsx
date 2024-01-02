@@ -8,7 +8,7 @@ const NavBar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <div className="mx-auto my-4">
+    <div className="mx-auto my-4 fixed w-full top-0 left-0 right-0">
       <nav className="border-gray-200 px-2 mb-10">
         <div className="container mx-auto flex flex-wrap items-center justify-between">
           <Link to={"/"} className="flex">
@@ -18,19 +18,19 @@ const NavBar = () => {
           </Link>
           <div className="flex md:order-2">
             <div className="relative mr-3 md:mr-0 hidden md:block">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg
-                  className="w-5 h-5 text-gray-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className="flex items-center gap-5 justify-center">
+                <Link
+                  to={"/signup"}
+                  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1.5 px-4 border border-blue-500 hover:border-transparent rounded"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
+                  Sign Up
+                </Link>
+                <Link
+                  to={"/login"}
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 border border-blue-700 rounded"
+                >
+                  Log In
+                </Link>
               </div>
             </div>
             <button
