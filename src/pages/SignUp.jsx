@@ -1,9 +1,24 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
+  const [userData, setUserData] = useState({});
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(userData);
+  };
   return (
     <div className="max-w-xs my-40">
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      >
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -16,6 +31,7 @@ const SignUp = () => {
             id="email"
             type="email"
             placeholder="email"
+            onChange={handleChange}
           />
         </div>
         <div className="mb-4">
@@ -30,6 +46,7 @@ const SignUp = () => {
             id="username"
             type="text"
             placeholder="Username"
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -44,6 +61,7 @@ const SignUp = () => {
             id="password"
             type="password"
             placeholder="******************"
+            onChange={handleChange}
           />
         </div>
         <div className="flex items-center justify-between">

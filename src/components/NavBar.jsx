@@ -21,13 +21,13 @@ const NavBar = () => {
               <div className="flex items-center gap-5 justify-center">
                 <Link
                   to={"/signup"}
-                  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1.5 px-4 border border-blue-500 hover:border-transparent rounded"
+                  className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1.5 px-4 border border-blue-500 hover:border-transparent rounded"
                 >
                   Sign Up
                 </Link>
                 <Link
                   to={"/login"}
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 border border-blue-700 rounded"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 border border-blue-700 rounded"
                 >
                   Log In
                 </Link>
